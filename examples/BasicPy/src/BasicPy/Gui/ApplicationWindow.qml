@@ -71,6 +71,19 @@ EaComponents.ApplicationWindow {
         },
         // Project page
 
+        // Data page
+        EaElements.AppBarTabButton {
+            id: dataButton
+            enabled: false
+            fontIcon: 'archive'
+            text: qsTr('Data')
+            ToolTip.text: qsTr('Data description page')
+            Component.onCompleted: {
+                Globals.References.applicationWindow.appBarCentralTabs.dataButton = dataButton
+            }
+        },
+        // Data page
+
         // Summary page
         EaElements.AppBarTabButton {
             id: summaryButton
